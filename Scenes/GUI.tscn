@@ -1,0 +1,278 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
+[ext_resource path="res://Resures/HardMode.png" type="Texture" id=2]
+[ext_resource path="res://Resures/LatticeButton.png" type="Texture" id=3]
+[ext_resource path="res://Resures/SecondPlayer.png" type="Texture" id=4]
+[ext_resource path="res://Resures/FirstPlayer.png" type="Texture" id=5]
+[ext_resource path="res://Resures/EasyMode.png" type="Texture" id=6]
+[ext_resource path="res://Resures/NoticeIcon.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/Quicksand-Bold.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.278431, 0.537255, 0.262745, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+anti_aliasing_size = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+anti_aliasing_size = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+draw_center = false
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+anti_aliasing_size = 5
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+anti_aliasing_size = 5
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.32549, 0.682353, 0.305882, 1 )
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+
+[sub_resource type="DynamicFont" id=12]
+resource_local_to_scene = true
+size = 26
+use_filter = true
+extra_spacing_top = -4
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="ImageTexture" id=14]
+
+[sub_resource type="DynamicFont" id=15]
+size = 26
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="ImageTexture" id=16]
+
+[sub_resource type="ImageTexture" id=17]
+
+[sub_resource type="DynamicFont" id=18]
+size = 40
+font_data = ExtResource( 8 )
+
+[sub_resource type="Animation" id=19]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Notice:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ), Vector2( 450, 45 ) ]
+}
+
+[sub_resource type="ImageTexture" id=20]
+
+[node name="GUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 437.0
+margin_right = 637.0
+margin_bottom = 487.0
+rect_pivot_offset = Vector2( 0, 3 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.87451, 0.87451, 0.87451, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notice" type="Button" parent="."]
+anchor_right = 0.053
+margin_top = 31.0
+margin_right = -54.272
+margin_bottom = 76.0
+rect_pivot_offset = Vector2( 0, 3 )
+focus_mode = 0
+mouse_filter = 2
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+shortcut_in_tooltip = false
+button_mask = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+align = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 362.0
+margin_right = 637.0
+margin_bottom = 412.0
+rect_pivot_offset = Vector2( 0, 3 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.87451, 0.87451, 0.87451, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModeButton" type="TextureButton" parent="."]
+margin_left = 898.05
+margin_top = 387.0
+margin_right = 998.05
+margin_bottom = 487.0
+disabled = true
+texture_normal = ExtResource( 3 )
+texture_disabled = SubResource( 14 )
+expand = true
+
+[node name="ChoseColorLabel" type="Label" parent="."]
+visible = false
+margin_left = 387.0
+margin_top = 310.558
+margin_right = 637.0
+margin_bottom = 360.558
+custom_fonts/font = SubResource( 15 )
+text = "Chose your color"
+align = 1
+valign = 1
+
+[node name="SecondPlayerButton" type="TextureButton" parent="."]
+margin_left = 537.0
+margin_top = 380.0
+margin_right = 637.0
+margin_bottom = 480.0
+disabled = true
+texture_normal = ExtResource( 4 )
+texture_disabled = SubResource( 16 )
+expand = true
+
+[node name="FirstPlayerButton" type="TextureButton" parent="."]
+margin_left = 387.0
+margin_top = 380.0
+margin_right = 487.0
+margin_bottom = 480.0
+disabled = true
+texture_normal = ExtResource( 5 )
+texture_disabled = SubResource( 17 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+margin_left = 262.0
+margin_top = 6.0
+margin_right = 762.0
+margin_bottom = 506.0
+expand = true
+
+[node name="GameName" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 100.0
+custom_fonts/font = SubResource( 18 )
+text = "Peach & Blueberry"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/start_notice = SubResource( 19 )
+
+[node name="DifficultButton" type="TextureButton" parent="."]
+margin_left = 25.0
+margin_top = 437.0
+margin_right = 175.0
+margin_bottom = 487.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+texture_disabled = SubResource( 20 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="Notice" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="ModeButton" to="." method="_on_ModeButton_pressed"]
+[connection signal="pressed" from="SecondPlayerButton" to="." method="_on_SecondPlayerButton_pressed"]
+[connection signal="pressed" from="FirstPlayerButton" to="." method="_on_FirstPlayerButton_pressed"]
+[connection signal="toggled" from="DifficultButton" to="." method="_on_DifficultButton_toggled"]
